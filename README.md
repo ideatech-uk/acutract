@@ -1,29 +1,23 @@
-# Juvix
+# Acutract
 
-![Mascot](https://juvix.org/img/mascot.jpg)
-
-![GitHub](https://img.shields.io/github/license/metastatedev/juvix)
-![Build status](https://img.shields.io/circleci/build/github/metastatedev/juvix?token=abc123def456)
-![GitHub issues](https://img.shields.io/github/issues/metastatedev/juvix)
 
 ## Overview
 
-Juvix synthesizes a high-level frontend syntax, dependent-linearly-typed core language, whole-program optimisation system,
+Acutract synthesizes a high-level frontend syntax, dependent-linearly-typed core language, whole-program optimisation system,
 and backend-swappable execution model into a single unified stack for writing formally verifiable, efficiently executable
 smart contracts which can be deployed to a variety of distributed ledgers.
 
-Juvix is designed to address the problems that we have experienced while trying to write & deploy decentralised applications and that we observe in the ecosystem at large:
+Acutract is designed to address the problems that we have experienced while trying to write & deploy decentralised applications and that we observe in the ecosystem at large:
 the difficulty of effective verification, the ceiling of compositional complexity, the illegibility of execution costs, and the lock-in to particular backends.
-In order to do so, Juvix draws upon and aims to productionise a deep reservoir of prior academic research in programming language design & type theory which we believe has a high degree of applicability to these problems.
+In order to do so, Acutract draws upon and aims to productionise a deep reservoir of prior academic research in programming language design & type theory which we believe has a high degree of applicability to these problems.
 
-Juvix's compiler architecture is purpose-built from the ground up for the particular requirements and economic trade-offs
+Acutract's compiler architecture is purpose-built from the ground up for the particular requirements and economic trade-offs
 of the smart contract use case — it prioritises behavioural verifiability, semantic precision, and output code efficiency over compilation speed,
 syntactical familiarity, and backwards compatibility with existing blockchain virtual machines.
 
 > Please note: the frontend language is not yet implemented as we are still working out some details of the type theory & compiler transformations.
-  Juvix may end up supporting an existing frontend language (or more than one).
+  Acutract may end up supporting an existing frontend language (or more than one).
 
-For details, see [the language reference](./doc/reference/language-reference.pdf).
 
 ## Caveats
 
@@ -31,13 +25,9 @@ This is pre-alpha software released for experimentation & research purposes only
 
 Do not expect API stability. Expect bugs. Expect divergence from canonical protocol implementations.
 
-Formal verification of various properties of the Juvix language & compiler in Agda is [in progress](experimental/qtt-agda) but not yet complete.
+Formal verification of various properties of the Acutract language & compiler in Agda is in progress but not yet complete.
 
 No warranty is provided or implied.
-
-## Contributing
-
-See [CONTRIBUTING.md](./doc/CONTRIBUTING.md).
 
 ## Installation
 
@@ -59,7 +49,7 @@ The following are required:
   - For Arch Linux    : `pacman -S stack`
   - For macOS : `brew install haskell-stack`
 - **Z3**
-  - `make build-z3` while in the `juvix` directory
+  - `make build-z3` while in the `acutract` directory
 - **libsecp256k1**
   - For Ubuntu/Debian : `apt install libsecp256k1-dev`
   - For Arch Linux : `pacman -S libsecp256k1`
@@ -76,7 +66,7 @@ The following are required:
 
 ### Building
 
-Build Juvix and install the binary to the local path with:
+Build Acutract and install the binary to the local path with:
 
 ```bash
 make
@@ -92,10 +82,10 @@ make build-opt
 
 ## Usage
 
-Juvix is not yet production-ready. You can play around with some functionality in an interactive REPL:
+Acutract is not yet production-ready. You can play around with some functionality in an interactive REPL:
 
 ```bash
-juvix interactive
+acutract interactive
 ```
 
 ## Development
@@ -107,7 +97,7 @@ juvix interactive
 
 ### Documentation Generator
 
-[Roswell](https://github.com/roswell/roswell) is required for automatic generation of documentation in [doc/Code](https://github.com/metastatedev/juvix/tree/develop/doc/Code).
+[Roswell](https://github.com/roswell/roswell) is required for automatic generation of documentation
 
 Once Roswell is installed one only needs to add `~/.roswell/bin` to their bash path along with running `ros install metastatedev/org-generation`.
 
